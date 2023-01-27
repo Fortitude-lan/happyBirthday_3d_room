@@ -32,3 +32,51 @@ body
 {
     color: inherit;
 }
+
+.passage{
+    margin: 30px auto;
+    width: 80%;
+    letter-spacing: 0.2rem;
+    line-height: 2.8em;
+    font-size: 18px;
+    font-weight: 600;
+    color:#000;
+    /* #0DCFDF; */
+    /* text-shadow: 0 0 2px #686868,0 1px 1px #ddd, 0 2px 1px #d5d5d5, 0 3px 1px #ccc, 0 4px 1px #c5c5c5,
+    0 5px 1px #c1c1c1, 0 6px 1px #bbb, 0 7px 1px #777,0 8px 3px rgba(100,100,100,0.4),0 9px 5px rgba(100,
+    100,100,0.09),0 10px 7px rgba(100,100,100,0.14),0 11px 9px rgba(100,100,100,0.2),0 12px 11px rgba(100,100,
+    100,0.24),0 13px 15px rgba(100,100,100,0.29); */
+    /* background-color:#fff; */
+}
+.heart{
+    color:#f00;
+}
+.bg{
+    background-image: url(../static/assets/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    filter: blur(30px);
+    z-index: -1;
+    zoom:1;
+}
+.jlq{
+    cursor: pointer;
+    width: 25px;
+    mix-blend-mode: multiply;
+    vertical-align: middle;
+    transition: transform 0.5s;
+}
+.jlq:hover{
+    transform: rotateZ(360deg);
+    transition: transform 0.5s;
+}
+.d{
+    display: none;
+}

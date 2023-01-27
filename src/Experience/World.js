@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import Experience from './Experience.js'
+import House from './House.js'
 import Baked from './Baked.js'
 import GoogleLeds from './GoogleLeds.js'
 import LoupedeckButtons from './LoupedeckButtons.js'
@@ -9,68 +10,60 @@ import ElgatoLight from './ElgatoLight.js'
 import BouncingLogo from './BouncingLogo.js'
 import Screen from './Screen.js'
 
-export default class World
-{
-    constructor(_options)
-    {
+export default class World {
+    constructor(_options) {
         this.experience = new Experience()
         this.config = this.experience.config
         this.scene = this.experience.scene
         this.resources = this.experience.resources
-        
-        this.resources.on('groupEnd', (_group) =>
-        {
-            if(_group.name === 'base')
-            {
-                this.setBaked()
-                this.setGoogleLeds()
-                this.setLoupedeckButtons()
-                this.setCoffeeSteam()
-                this.setTopChair()
-                this.setElgatoLight()
-                this.setBouncingLogo()
-                this.setScreens()
+
+        this.resources.on('groupEnd', (_group) => {
+            if (_group.name === 'base') {
+                this.setHouse()
+                // this.setBaked()
+                // this.setGoogleLeds()
+                // this.setLoupedeckButtons()
+                // this.setCoffeeSteam()
+                // this.setTopChair()
+                // this.setElgatoLight()
+                // this.setBouncingLogo()
+                // this.setScreens()
             }
         })
     }
+    setHouse() {
+        this.house = new House()
+    }
 
-    setBaked()
-    {
+    setBaked() {
         this.baked = new Baked()
     }
 
-    setGoogleLeds()
-    {
+    setGoogleLeds() {
         this.googleLeds = new GoogleLeds()
     }
 
-    setLoupedeckButtons()
-    {
+    setLoupedeckButtons() {
         this.loupedeckButtons = new LoupedeckButtons()
     }
 
-    setCoffeeSteam()
-    {
+    setCoffeeSteam() {
         this.coffeeSteam = new CoffeeSteam()
     }
 
-    setTopChair()
-    {
+    setTopChair() {
         this.topChair = new TopChair()
     }
 
-    setElgatoLight()
-    {
+    setElgatoLight() {
         this.elgatoLight = new ElgatoLight()
     }
 
-    setBouncingLogo()
-    {
+    setBouncingLogo() {
         this.bouncingLogo = new BouncingLogo()
     }
 
-    setScreens()
-    {
+    setScreens() {
         this.pcScreen = new Screen(
             this.resources.items.pcScreenModel.scene.children[0],
             '/assets/videoPortfolio.mp4'
@@ -81,29 +74,26 @@ export default class World
         )
     }
 
-    resize()
-    {
+    resize() {
     }
 
-    update()
-    {
-        if(this.googleLeds)
+    update() {
+        if (this.googleLeds)
             this.googleLeds.update()
 
-        if(this.loupedeckButtons)
+        if (this.loupedeckButtons)
             this.loupedeckButtons.update()
 
-        if(this.coffeeSteam)
+        if (this.coffeeSteam)
             this.coffeeSteam.update()
 
-        if(this.topChair)
+        if (this.topChair)
             this.topChair.update()
 
-        if(this.bouncingLogo)
+        if (this.bouncingLogo)
             this.bouncingLogo.update()
     }
 
-    destroy()
-    {
+    destroy() {
     }
 }
