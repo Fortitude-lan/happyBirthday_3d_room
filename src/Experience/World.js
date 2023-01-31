@@ -20,6 +20,7 @@ export default class World {
         this.resources.on('groupEnd', (_group) => {
             if (_group.name === 'base') {
                 this.setHouse()
+                this.setBollons()
                 // this.setBaked()
                 // this.setGoogleLeds()
                 // this.setLoupedeckButtons()
@@ -34,7 +35,9 @@ export default class World {
     setHouse() {
         this.house = new House()
     }
-
+    setBollons(){
+        // this.bollons = new Bollons()
+    }
     setBaked() {
         this.baked = new Baked()
     }

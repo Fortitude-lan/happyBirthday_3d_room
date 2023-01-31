@@ -26,35 +26,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+    <script src="./js/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
-    <div class="passage"></div>
-    <div class="credits">
-        HAPPY BIRTHDAY MYK
-        <!-- My Room in 3D by <a href="https://bruno-simon.com" target="_blank">Bruno Simon</a> (<a href="https://github.com/brunosimon/my-room-in-3d" target="_blank">Source code</a>) -->
-    </div>
-    <div class="bg"></div>
-    <div class="experience"></div>
+    <canvas id="canvas-number"></canvas>
+    <canvas id="canvas-dots"></canvas>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script src="./js/TweenMax.js"></script>
+
+    <canvas id="firework" ></canvas>
+    <script src="./js/firework.js"></script>
+    <div class="credits"> <a href="./happy.html">HAPPY BIRTHDAY MYK</a> </div>
     <script>
-        var typed = new Typed(".passage", {
-            strings: [
-                `
-            <p> &nbsp;&nbsp; 小雪儿你好呀！^50 今天是我宝贝23(16)岁生日呢 生日快乐哦~ ^500  这是姐姐参与乖乖的第三个生日了，时间真的好快啊！^500 自从遇见乖乖，我真正体会到人生被照亮是什么感觉，每次听到你的声音看到你的笑脸我就感受到我的内心充满了希望与坚定，好想把你融进我的身体里再也不分开... 乖乖也是这样嘛。^500 此时此刻真的希望乖乖看的不是屏幕而是真正的我，可以给乖乖真实的亲亲抱抱，把小蛋糕涂到小鼻尖上，和你度过难忘的一夜...hhh </p>
-            <p>&nbsp;&nbsp; 脑补一下言归正传呜，在新的一年里祝愿我宝贝老婆开心健康万事如意，我们的感情呈指数上升，都要好好的哦！异地让我们有了好多遗憾，但是有了让别人羡慕嫉妒的对彼此的坚定和爱, 姐姐会变的更棒棒给我宝贝更幸福的生活，当我们两个真的合体了以后 我们就是最厉害的啦~ ^500 往后余生 ^300 请多指教 ^300 我爱你<span class='heart'>♥</span></p>
-            <p>&nbsp;&nbsp; 请小公主进入城堡吧-> <img class="jlq" onclick="c()" src="/assets/jlq.jpg"></p>
-            
-            `
-            ],//输出的文字
-            typeSpeed: 0.1,//打字的速度
-        });
-        function c() {
-            let class1 = document.querySelector(".passage").classList.add("d");
-            let class2 = document.querySelector(".bg").classList.add("d");
-            var _span = document.querySelector(".typed-cursor");
-            _span.parentNode.removeChild(_span);
-            // console.log('ggg')
-        }
     </script>
 </body>
 

@@ -18,9 +18,21 @@ module.exports = {
                 { from: path.resolve(__dirname, '../static') }
             ]
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, '../src/js') }
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
-            minify: true
+            minify: true,
+            filename:'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/happy.html'),
+            minify: true,
+            filename:'happy.html'
+
         }),
         new MiniCSSExtractPlugin()
     ],

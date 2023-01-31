@@ -4,7 +4,7 @@ import Experience from './Experience.js'
 import vertexShader from './shaders/house/vertex.glsl'
 import fragmentShader from './shaders/house/fragment.glsl'
 
-export default class CoffeeSteam {
+export default class House {
     constructor() {
         this.experience = new Experience()
         this.resources = this.experience.resources
